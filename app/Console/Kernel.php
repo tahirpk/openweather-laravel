@@ -15,7 +15,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        // $schedule->command('inspire')->hourly(); withoutOverlapping(10)
+       // $schedule->command('weather:city')->everyMinute(); everyTenMinutes
+        $schedule->command('weather:all-city')->everyTenMinutes();
     }
 
     /**
